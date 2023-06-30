@@ -1,9 +1,9 @@
 name: Deploy
 
 on:
-  push:
-    branches: [ main ]
-
+  - push
+  - workflow_dispatch
+  
 permissions:
   contents: read
 
@@ -24,8 +24,6 @@ jobs:
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY_SANDBOX }}
         aws_default_region: us-east-1
 
-        # Provide a secret called `DOT_ENV` to append environment variables to the .env file
-        # dot_env: ${{ secrets.DOT_ENV }}
         domain_name: bitovi-sandbox.com
         sub_domain: example-node-${{ github.ref_name }}
 
