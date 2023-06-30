@@ -28,6 +28,4 @@ jobs:
         # dot_env: ${{ secrets.DOT_ENV }}
         domain_name: bitovi-sandbox.com
         sub_domain: example-node-${{ github.ref_name }}
-        
-        docker_full_cleanup: true
-        app_directory_cleanup: true
+
