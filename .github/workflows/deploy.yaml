@@ -27,4 +27,4 @@ jobs:
         domain_name: bitovi-sandbox.com
         sub_domain: example-node-${{ github.ref_name }}
         
-        stack_destroy: true
+        stack_destroy: false
